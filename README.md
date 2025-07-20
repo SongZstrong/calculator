@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Multi-Function Calculator App
 
 A modern multi-function website built with Next.js 15 and TypeScript, featuring online calculation tools and multi-language support.
@@ -169,6 +169,4 @@ npm start
 ---
 
 **享受使用我们的多功能计算器！** 🎉
-=======
-# calculate
->>>>>>> 62016ce6eb8b83a9ae76ca6cc50fd991bb45c25f
+

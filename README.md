@@ -161,12 +161,4 @@ npm start
 
 本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
 
-## 📞 联系方式
-
-- 项目链接: [https://github.com/your-username/calculator-app](https://github.com/your-username/calculator-app)
-- 问题反馈: [Issues](https://github.com/your-username/calculator-app/issues)
-
----
-
-**享受使用我们的多功能计算器！** 🎉
 

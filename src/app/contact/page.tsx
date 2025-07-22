@@ -10,8 +10,8 @@ export default function ContactPage() {
       title: 'Email',
       description: 'Send us an email',
       icon: '📧',
-      value: 'contact@calculator-app.com',
-      action: 'mailto:contact@calculator-app.com'
+      value: 'calculatewell@protonmail.com',
+      action: 'mailto:calculatewell@protonmail.com'
     },
     {
       title: 'Online Support',
@@ -24,8 +24,8 @@ export default function ContactPage() {
       title: 'Technical Support',
       description: 'Technical issue feedback',
       icon: '🔧',
-      value: 'support@calculator-app.com',
-      action: 'mailto:support@calculator-app.com'
+      value: 'calculatewell@protonmail.com',
+      action: 'mailto:calculatewell@protonmail.com'
     }
   ];
 

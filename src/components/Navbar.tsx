@@ -2,19 +2,18 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useLanguage } from '@/contexts/LanguageContext';
 import { useState } from 'react'; // 引入 useState
 
 const Navbar = () => {
   const pathname = usePathname();
-  const { t, language, setLanguage } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // 状态来控制移动菜单的显示
 
   const navItems = [
-    { href: '/', label: t.nav.home },
-    { href: '/about', label: t.nav.about },
-    { href: '/services', label: t.nav.services },
-    { href: '/contact', label: t.nav.contact },
+    { href: '/', label: 'Home' },
+    { href: '/date-calculate', label: 'Date Calculator' },
+    { href: '/about', label: 'About' },
+    { href: '/services', label: 'Services' },
+    { href: '/contact', label: 'Contact' },
   ];
 
   return (
@@ -48,30 +47,6 @@ const Navbar = () => {
                 </Link>
               ))}
             </div>
-          </div>
-
-          {/* 语言选择器 */}
-          <div className="hidden md:flex items-center space-x-2">
-            <button
-              onClick={() => setLanguage('zh')}
-              className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
-                language === 'zh'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
-            >
-              中文
-            </button>
-            <button
-              onClick={() => setLanguage('en')}
-              className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
-                language === 'en'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
-            >
-              English
-            </button>
           </div>
 
           {/* 移动端菜单按钮 */}
@@ -113,29 +88,6 @@ const Navbar = () => {
               {item.label}
             </Link>
           ))}
-          {/* 在移动端菜单中也加入语言切换 */}
-          <div className="flex items-center space-x-2 pt-4 px-3">
-            <button
-              onClick={() => { setLanguage('zh'); setIsMobileMenuOpen(false); }}
-              className={`w-full px-3 py-1 rounded text-sm font-medium transition-colors ${
-                language === 'zh'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
-            >
-              中文
-            </button>
-            <button
-              onClick={() => { setLanguage('en'); setIsMobileMenuOpen(false); }}
-              className={`w-full px-3 py-1 rounded text-sm font-medium transition-colors ${
-                language === 'en'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
-            >
-              English
-            </button>
-          </div>
         </div>
       </div>
     </nav>

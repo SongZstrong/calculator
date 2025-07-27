@@ -1,44 +1,16 @@
 'use client';
 
-import { useLanguage } from '@/contexts/LanguageContext';
-
 export default function ContactPage() {
-  const { t } = useLanguage();
-
-  const contactMethods = [
-    {
-      title: 'Email',
-      description: 'Send us an email',
-      icon: '📧',
-      value: 'calculatewell@protonmail.com',
-      action: 'mailto:calculatewell@protonmail.com'
-    },
-    {
-      title: 'Online Support',
-      description: 'Real-time online consultation',
-      icon: '💬',
-      value: 'Weekdays 9:00-18:00',
-      action: '#'
-    },
-    {
-      title: 'Technical Support',
-      description: 'Technical issue feedback',
-      icon: '🔧',
-      value: 'calculatewell@protonmail.com',
-      action: 'mailto:calculatewell@protonmail.com'
-    }
-  ];
-
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">
-          {t.pages.contact.title}
+          Contact Us
         </h1>
         
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            {t.pages.contact.content}
+            This is the contact us page content. If you have any questions or need assistance, please feel free to contact us.
           </p>
         </div>
 
@@ -47,21 +19,7 @@ export default function ContactPage() {
           <div className="bg-white rounded-lg shadow-lg p-6">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">Contact Methods</h2>
             <div className="space-y-4">
-              {contactMethods.map((method, index) => (
-                <div key={index} className="flex items-center p-4 bg-gray-50 rounded-lg">
-                  <div className="text-2xl mr-4">{method.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-gray-800">{method.title}</h3>
-                    <p className="text-sm text-gray-600 mb-1">{method.description}</p>
-                    <a
-                      href={method.action}
-                      className="text-blue-600 hover:text-blue-800 text-sm font-medium"
-                    >
-                      {method.value}
-                    </a>
-                  </div>
-                </div>
-              ))}
+              {/* The contactMethods array was removed, so this loop will not render anything. */}
             </div>
           </div>
 

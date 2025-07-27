@@ -1,10 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
 
 const Calculator = () => {
-  const { t } = useLanguage();
   const [valueA, setValueA] = useState<string>('');
   const [valueB, setValueB] = useState<string>('');
   const [result, setResult] = useState<string>('');
@@ -24,41 +22,41 @@ const Calculator = () => {
     switch (operation) {
       case 'add':
         calculatedResult = a + b;
-        resultText = `${t.calculator.result}${calculatedResult}`;
+        resultText = `${calculatedResult}`;
         break;
       case 'subtract':
         calculatedResult = a - b;
-        resultText = `${t.calculator.result}${calculatedResult}`;
+        resultText = `${calculatedResult}`;
         break;
       case 'multiply':
         calculatedResult = a * b;
-        resultText = `${t.calculator.result}${calculatedResult}`;
+        resultText = `${calculatedResult}`;
         break;
       case 'divide':
         if (b === 0) {
-          resultText = t.calculator.error.divideByZero;
+          resultText = 'Cannot divide by zero';
         } else {
           calculatedResult = a / b;
-          resultText = `${t.calculator.result}${calculatedResult}`;
+          resultText = `${calculatedResult}`;
         }
         break;
       case 'percentage':
         if (b === 0) {
-          resultText = t.calculator.error.divideByZero;
+          resultText = 'Cannot divide by zero';
         } else {
           calculatedResult = (a / b) * 100;
-          resultText = `${t.calculator.result}${calculatedResult.toFixed(2)}${t.calculator.percentageResult}`;
+          resultText = `${calculatedResult.toFixed(2)}%`;
         }
         break;
       case 'percentageChange':
         if (b === 0) {
-          resultText = t.calculator.error.divideByZero;
+          resultText = 'Cannot divide by zero';
         } else {
           calculatedResult = ((a - b) / b) * 100;
           if (calculatedResult >= 0) {
-            resultText = `${t.calculator.increase}${calculatedResult.toFixed(2)}${t.calculator.percentageResult}`;
+            resultText = `${calculatedResult.toFixed(2)}%`;
           } else {
-            resultText = `${t.calculator.decrease}${Math.abs(calculatedResult).toFixed(2)}${t.calculator.percentageResult}`;
+            resultText = `${Math.abs(calculatedResult).toFixed(2)}%`;
           }
         }
         break;
@@ -100,7 +98,7 @@ const Calculator = () => {
       <div className="space-y-4 mb-6">
         <div>
           <label htmlFor="valueA" className="block text-sm font-medium text-gray-700 mb-2">
-            {t.calculator.valueA}
+            Value A
           </label>
           <input
             id="valueA"
@@ -113,7 +111,7 @@ const Calculator = () => {
         </div>
         <div>
           <label htmlFor="valueB" className="block text-sm font-medium text-gray-700 mb-2">
-            {t.calculator.valueB}
+            Value B
           </label>
           <input
             id="valueB"
@@ -132,25 +130,25 @@ const Calculator = () => {
           onClick={() => handleCalculate('add')}
           className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors font-medium"
         >
-          {t.calculator.add}
+          Add
         </button>
         <button
           onClick={() => handleCalculate('subtract')}
           className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors font-medium"
         >
-          {t.calculator.subtract}
+          Subtract
         </button>
         <button
           onClick={() => handleCalculate('multiply')}
           className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors font-medium"
         >
-          {t.calculator.multiply}
+          Multiply
         </button>
         <button
           onClick={() => handleCalculate('divide')}
           className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors font-medium"
         >
-          {t.calculator.divide}
+          Divide
         </button>
       </div>
 
@@ -160,13 +158,13 @@ const Calculator = () => {
           onClick={() => handleCalculate('percentage')}
           className="w-full px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors font-medium text-sm"
         >
-          {t.calculator.percentage}
+          Percentage
         </button>
         <button
           onClick={() => handleCalculate('percentageChange')}
           className="w-full px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors font-medium text-sm"
         >
-          {t.calculator.percentageChange}
+          Percentage Change
         </button>
       </div>
 
@@ -176,7 +174,7 @@ const Calculator = () => {
           onClick={handleClear}
           className="w-full px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors font-medium"
         >
-          {t.calculator.clear}
+          Clear
         </button>
       </div>
 

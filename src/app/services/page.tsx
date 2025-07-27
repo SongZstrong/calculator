@@ -1,10 +1,6 @@
 'use client';
 
-import { useLanguage } from '@/contexts/LanguageContext';
-
 export default function ServicesPage() {
-  const { t } = useLanguage();
-
   const services = [
     {
       title: 'Basic Calculation Services',
@@ -58,14 +54,14 @@ export default function ServicesPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">
-          {t.pages.services.title}
+          Our Services
         </h1>
         
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+        <div className="bg-white rounded-lg shadow-lg p-8">
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            {t.pages.services.content}
+            This is the services page content. We provide various professional services including technical consulting, project development, system maintenance, and more.
           </p>
         </div>
 

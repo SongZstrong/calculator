@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 
 function getDuration(start: Date, end: Date) {
-  let duration = {
+  const duration = {
     years: 0,
     months: 0,
     weeks: 0,
@@ -16,9 +16,9 @@ function getDuration(start: Date, end: Date) {
   };
 
   // Calculate total seconds
-  let diffMs = end.getTime() - start.getTime();
+  const diffMs = end.getTime() - start.getTime();
   if (diffMs < 0) return duration;
-  let diffSec = Math.floor(diffMs / 1000);
+  const diffSec = Math.floor(diffMs / 1000);
   duration.seconds = diffSec;
   duration.minutes = Math.floor(diffSec / 60);
   duration.hours = Math.floor(diffSec / 3600);
@@ -26,14 +26,14 @@ function getDuration(start: Date, end: Date) {
   duration.weeks = Math.floor(diffSec / (86400 * 7));
 
   // Years and months (approximate)
-  let startY = start.getFullYear(), startM = start.getMonth();
-  let endY = end.getFullYear(), endM = end.getMonth();
+  const startY = start.getFullYear(), startM = start.getMonth();
+  const endY = end.getFullYear(), endM = end.getMonth();
   duration.years = endY - startY - (endM < startM || (endM === startM && end.getDate() < start.getDate()) ? 1 : 0);
   duration.months = (endY - startY) * 12 + (endM - startM) - (end.getDate() < start.getDate() ? 1 : 0);
 
   // Weekdays and weekends
   let weekdays = 0, weekends = 0;
-  let d = new Date(start);
+  const d = new Date(start);
   while (d <= end) {
     if (d.getDay() === 0 || d.getDay() === 6) weekends++;
     else weekdays++;
@@ -68,7 +68,7 @@ function getPreciseDiff(start: Date, end: Date) {
   }
   if (days < 0) {
     // Get days in previous month
-    let prevMonth = new Date(end.getFullYear(), end.getMonth(), 0);
+    const prevMonth = new Date(end.getFullYear(), end.getMonth(), 0);
     days += prevMonth.getDate();
     months--;
   }
@@ -90,6 +90,28 @@ const HOURS = Array.from({ length: 24 }, (_, i) => i);
 const MINUTES = Array.from({ length: 60 }, (_, i) => i);
 const SECONDS = Array.from({ length: 60 }, (_, i) => i);
 
+type Duration = {
+  years: number;
+  months: number;
+  weeks: number;
+  days: number;
+  weekdays: number;
+  weekends: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+  precise?: PreciseDiff;
+};
+
+type PreciseDiff = {
+  years: number;
+  months: number;
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+};
+
 export default function DateCalculatePage() {
   // Start and end time states
   const [startYear, setStartYear] = useState(CURRENT_YEAR);
@@ -104,7 +126,7 @@ export default function DateCalculatePage() {
   const [endHour, setEndHour] = useState(0);
   const [endMinute, setEndMinute] = useState(0);
   const [endSecond, setEndSecond] = useState(0);
-  const [result, setResult] = useState<any>(null);
+  const [result, setResult] = useState<Duration | null>(null);
   const [error, setError] = useState("");
 
   // Update days in month when year or month changes
@@ -221,10 +243,10 @@ export default function DateCalculatePage() {
   );
 }
 
-function formatPreciseDiffOutput(diff: any) {
+function formatPreciseDiffOutput(diff: PreciseDiff | undefined) {
   if (!diff) return '';
   const { years, months, days, hours, minutes, seconds } = diff;
-  let parts = [];
+  const parts = [];
   if (years) parts.push(`${years} year${years > 1 ? 's' : ''}`);
   if (months) parts.push(`${months} month${months > 1 ? 's' : ''}`);
   if (days) parts.push(`${days} day${days > 1 ? 's' : ''}`);

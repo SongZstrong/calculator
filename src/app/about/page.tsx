@@ -1,20 +1,16 @@
 'use client';
 
-import { useLanguage } from '@/contexts/LanguageContext';
-
 export default function AboutPage() {
-  const { t } = useLanguage();
-
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">
-          {t.pages.about.title}
+          About Us
         </h1>
         
         <div className="bg-white rounded-lg shadow-lg p-8">
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            {t.pages.about.content}
+            This is the about us page content. We are a professional team dedicated to providing the best service and experience for our users.
           </p>
           
           <div className="grid md:grid-cols-2 gap-8 mt-12">

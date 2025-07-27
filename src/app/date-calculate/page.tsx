@@ -45,7 +45,7 @@ function getDuration(start: Date, end: Date) {
   return duration;
 }
 
-function getPreciseDiff(start: Date, end: Date) {
+function getPreciseDiff(start: Date, end: Date): PreciseDiff {
   // Stepwise difference: years, months, days, hours, minutes, seconds
   let years = end.getFullYear() - start.getFullYear();
   let months = end.getMonth() - start.getMonth();

@@ -37,38 +37,37 @@ export default function Home() {
 
       <div className="mt-16 max-w-3xl mx-auto">
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">How to Calculate Percentages</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">How to Get Started with the Calculator</h2>
           <p className="text-gray-700 mb-4">
-            Calculating percentages is a useful skill for shopping, grades, and everyday math. The basic formula is:
-          </p>
-          <div className="bg-blue-50 p-4 rounded mb-4">
-            <span className="font-mono text-blue-800">Percentage = (Part / Whole) × 100%</span>
-          </div>
-          <p className="text-gray-700 mb-4">
-            For example, if you scored 45 out of 60 on a test, your percentage is (45 / 60) × 100% = 75%.
+            Our calculator is designed for everyone. Whether you’re shopping, checking your grades, or planning a budget, just enter your numbers, pick an operation, and see the result instantly. For example, to find out what percentage 45 is of 60 (like a test score), enter 45 and 60, select “Percent Calculation,” and you’ll get 75%.
           </p>
           <p className="text-gray-700 mb-4">
-            To use the calculator above, enter the numbers you want to compare, select the percentage operation, and get your result instantly.
+            Try using the calculator for:
           </p>
+          <ul className="list-disc pl-6 text-gray-700 mb-4">
+            <li>Shopping discounts (e.g., what’s 30% off $120?)</li>
+            <li>Comparing grades or scores</li>
+            <li>Splitting bills or planning expenses</li>
+          </ul>
         </div>
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="font-semibold text-gray-700 mb-2">How do I calculate a percentage?</h3>
-              <p className="text-gray-600">Divide the part by the whole, then multiply by 100. For example, (20 / 80) × 100% = 25%.</p>
+              <h3 className="font-semibold text-gray-700 mb-2">How do I get started?</h3>
+              <p className="text-gray-600">Just enter your numbers, choose the operation, and click Calculate. The result appears instantly below.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-700 mb-2">Can I use this calculator for discounts?</h3>
-              <p className="text-gray-600">Yes! Enter the original and discounted prices to find the percentage off or the final price after discount.</p>
+              <h3 className="font-semibold text-gray-700 mb-2">Can I use this for both simple and advanced math?</h3>
+              <p className="text-gray-600">Yes! The calculator supports basic operations, percentages, and change rates for a variety of needs.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-700 mb-2">Is there a limit to the numbers I can enter?</h3>
-              <p className="text-gray-600">No, you can enter any numbers you need. The calculator supports both small and large values.</p>
+              <h3 className="font-semibold text-gray-700 mb-2">Is my data saved?</h3>
+              <p className="text-gray-600">No, all calculations are done locally in your browser. Nothing is stored or shared.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-700 mb-2">What if I want to calculate the percentage change?</h3>
-              <p className="text-gray-600">Use the change rate calculation feature to find the increase or decrease between two values as a percentage.</p>
+              <h3 className="font-semibold text-gray-700 mb-2">What if I enter a wrong number?</h3>
+              <p className="text-gray-600">You can clear the fields anytime and start over. The calculator will also warn you if your input isn’t valid.</p>
             </div>
           </div>
         </div>

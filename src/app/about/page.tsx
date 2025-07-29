@@ -123,25 +123,25 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* FAQ Section */}
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Frequently Asked Questions</h2>
-          <div className="space-y-4">
-            <div className="border-b border-gray-200 pb-4">
-              <h3 className="font-semibold text-gray-800 mb-2">How to use the calculator?</h3>
-              <p className="text-gray-600">Enter two values on the homepage, then select the corresponding operation button to get the result.</p>
-            </div>
-            <div className="border-b border-gray-200 pb-4">
-              <h3 className="font-semibold text-gray-800 mb-2">What calculation functions are supported?</h3>
-              <p className="text-gray-600">We support basic operations (addition, subtraction, multiplication, division), percentage calculation, and change rate calculation.</p>
-            </div>
-            <div className="border-b border-gray-200 pb-4">
-              <h3 className="font-semibold text-gray-800 mb-2">How to switch languages?</h3>
-              <p className="text-gray-600">Click the language button in the top right corner to switch between Chinese and English.</p>
+        {/* About FAQ Section */}
+        <div className="bg-white rounded-lg shadow-lg p-8 mt-12">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-semibold text-gray-700 mb-2">What makes this calculator different from others?</h3>
+              <p className="text-gray-600">Our calculator is built with a modern tech stack (React & Next.js), offers a clean interface, and supports a wide range of calculation scenarios, from simple math to advanced date and percentage calculations.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-800 mb-2">Is the calculator free to use?</h3>
-              <p className="text-gray-600">Yes, all our calculation functions are completely free.</p>
+              <h3 className="font-semibold text-gray-700 mb-2">Who is behind this project?</h3>
+              <p className="text-gray-600">We are a team of passionate developers and designers dedicated to making online calculations easy, accurate, and accessible for everyone.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-700 mb-2">How do you ensure calculation accuracy?</h3>
+              <p className="text-gray-600">All calculation logic is thoroughly tested and reviewed. We also welcome user feedback to help us catch any edge cases or improvements.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-700 mb-2">Can I suggest a new feature or improvement?</h3>
+              <p className="text-gray-600">Absolutely! We value user input. Please use the contact form to share your ideas or report issues, and we’ll do our best to respond and improve the site.</p>
             </div>
           </div>
         </div>

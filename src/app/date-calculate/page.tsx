@@ -242,38 +242,40 @@ export default function DateCalculatePage() {
       {/* --- Date Calculation Tutorial --- */}
       <div className="mt-16 max-w-3xl mx-auto">
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">How to Calculate Date Differences</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">How to Use the Date Calculator</h2>
           <p className="text-gray-700 mb-4">
-            Calculating the difference between two dates is useful for planning, deadlines, and tracking time. The basic idea is to subtract the start date from the end date. Most calculators (including the one above) will do this for you automatically.
+            Need to know how many days until your next vacation, or how long a project will take? The Date Calculator helps you plan by showing the exact difference between two dates—including years, months, weeks, and days.
           </p>
+          <ul className="list-disc pl-6 text-gray-700 mb-4">
+            <li>Project planning: Calculate the total days or weeks for a deadline</li>
+            <li>Travel: Find out how many days your trip will last</li>
+            <li>Special events: Count down to birthdays, anniversaries, or holidays</li>
+          </ul>
           <div className="bg-blue-50 p-4 rounded mb-4">
             <span className="font-mono text-blue-800">Date Difference = End Date - Start Date</span>
           </div>
           <p className="text-gray-700 mb-4">
-            For example, if your project starts on March 1 and ends on March 15, the difference is 14 days. You can also calculate the difference in months, years, or even hours and minutes.
-          </p>
-          <p className="text-gray-700 mb-4">
-            To use the calculator above, select your start and end dates and times, then click Calculate. The results will show the difference in years, months, weeks, days, and more.
+            Just select your start and end dates, add times if needed, and click Calculate. The results will break down the difference in every way you need.
           </p>
         </div>
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="font-semibold text-gray-700 mb-2">How do I calculate the number of days between two dates?</h3>
-              <p className="text-gray-600">Simply enter the start and end dates, and the calculator will show you the total days in between.</p>
+              <h3 className="font-semibold text-gray-700 mb-2">Can I include or exclude weekends?</h3>
+              <p className="text-gray-600">Yes, the calculator shows both total days and breaks down weekdays and weekends separately.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-700 mb-2">Can I include the end date in the calculation?</h3>
-              <p className="text-gray-600">Some tools include both the start and end date, while others only count the days in between. Check the result details to see which method is used.</p>
+              <h3 className="font-semibold text-gray-700 mb-2">How do I count down to a specific event?</h3>
+              <p className="text-gray-600">Set today as the start date and your event as the end date. The calculator will show you exactly how much time is left.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-700 mb-2">Does this calculator handle leap years?</h3>
-              <p className="text-gray-600">Yes, leap years are automatically considered when calculating the difference between dates.</p>
+              <h3 className="font-semibold text-gray-700 mb-2">Does it handle leap years and time zones?</h3>
+              <p className="text-gray-600">Leap years are included automatically. For time zones, make sure your device’s clock is set correctly.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-700 mb-2">Can I calculate the difference in months or years?</h3>
-              <p className="text-gray-600">Absolutely! The results will show the difference in years, months, weeks, days, and more.</p>
+              <h3 className="font-semibold text-gray-700 mb-2">Can I use this for business days only?</h3>
+              <p className="text-gray-600">Yes, check the “Duration in weekdays” result for business day calculations.</p>
             </div>
           </div>
         </div>

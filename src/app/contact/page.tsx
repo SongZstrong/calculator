@@ -89,25 +89,25 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* FAQ */}
-        <div className="mt-12 bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Frequently Asked Questions</h2>
-          <div className="space-y-4">
-            <div className="border-b border-gray-200 pb-4">
-              <h3 className="font-semibold text-gray-800 mb-2">How to use the calculator?</h3>
-              <p className="text-gray-600">Enter two values on the homepage, then select the corresponding operation button to get the result.</p>
-            </div>
-            <div className="border-b border-gray-200 pb-4">
-              <h3 className="font-semibold text-gray-800 mb-2">What calculation functions are supported?</h3>
-              <p className="text-gray-600">We support basic operations (addition, subtraction, multiplication, division), percentage calculation, and change rate calculation.</p>
-            </div>
-            <div className="border-b border-gray-200 pb-4">
-              <h3 className="font-semibold text-gray-800 mb-2">How to switch languages?</h3>
-              <p className="text-gray-600">Click the language button in the top right corner to switch between Chinese and English.</p>
+        {/* Contact FAQ Section */}
+        <div className="bg-white rounded-lg shadow-lg p-8 mt-12">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-semibold text-gray-700 mb-2">How can I get technical support?</h3>
+              <p className="text-gray-600">You can reach out to us using the contact form above. Please describe your issue in detail, and our team will get back to you as soon as possible.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-800 mb-2">Is the calculator free to use?</h3>
-              <p className="text-gray-600">Yes, all our calculation functions are completely free.</p>
+              <h3 className="font-semibold text-gray-700 mb-2">Where do I report a bug or issue?</h3>
+              <p className="text-gray-600">Please use the contact form to report any bugs or issues. Include steps to reproduce the problem if possible, so we can address it quickly.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-700 mb-2">Can I collaborate or advertise on your site?</h3>
+              <p className="text-gray-600">We’re open to collaboration and advertising opportunities. Please contact us with your proposal, and we’ll review it promptly.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-700 mb-2">How soon will I get a response?</h3>
+              <p className="text-gray-600">We aim to respond to all inquiries within 2 business days. For urgent issues, please mention “urgent” in your message subject.</p>
             </div>
           </div>
         </div>

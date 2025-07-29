@@ -11,9 +11,9 @@ const Navbar = () => {
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/date-calculate', label: 'Date Calculator' },
-    { href: '/about', label: 'About' },
+    { href: '/blog', label: 'Blog' }, // Add blog button
     { href: '/services', label: 'Services' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/about', label: 'About' }, // Merged About and Contact, placed last
   ];
 
   return (
@@ -21,22 +21,29 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            {/* 添加truncate和w-full等类来处理文本溢出 */}
+          <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="text-xl font-bold text-gray-800 hover:text-blue-600 transition-colors truncate">
               Calculate Well
+            </Link>
+            <Link
+              href="/date-calculate"
+              className={`ml-6 px-3 py-2 rounded-md text-sm font-medium transition-colors truncate text-black ${
+                pathname === '/date-calculate'
+                  ? 'bg-blue-600 text-white'
+                  : ''
+              }`}
+            >
+              Date Calculator
             </Link>
           </div>
 
           {/* 电脑端导航链接 */}
-          {/* 这里保持 hidden md:block 以便在小屏幕上隐藏 */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              {navItems.map((item) => (
+              {navItems.filter(item => item.href !== '/date-calculate').map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  // 添加 truncate 类来处理文本溢出
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors truncate ${
                     pathname === item.href
                       ? 'bg-blue-600 text-white'

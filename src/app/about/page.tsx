@@ -7,12 +7,10 @@ export default function AboutPage() {
         <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">
           About Us
         </h1>
-        
-        <div className="bg-white rounded-lg shadow-lg p-8">
+        <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
             This is the about us page content. We are a professional team dedicated to providing the best service and experience for our users.
           </p>
-          
           <div className="grid md:grid-cols-2 gap-8 mt-12">
             <div className="bg-blue-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-blue-800 mb-3">Our Mission</h3>
@@ -20,7 +18,6 @@ export default function AboutPage() {
                 To provide users with simple, efficient, and accurate online calculation tools, making complex calculations easy to use.
               </p>
             </div>
-            
             <div className="bg-green-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-green-800 mb-3">Our Vision</h3>
               <p className="text-green-700">
@@ -28,7 +25,6 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          
           <div className="mt-8 p-6 bg-gray-50 rounded-lg">
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Technical Features</h3>
             <ul className="space-y-2 text-gray-700">
@@ -49,6 +45,104 @@ export default function AboutPage() {
                 Real-time calculation with instant feedback
               </li>
             </ul>
+          </div>
+        </div>
+
+        {/* Contact Section */}
+        <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Contact Us</h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            If you have any questions or need assistance, please feel free to contact us.
+          </p>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Contact Methods (empty, reserved for future) */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Contact Methods</h3>
+              <div className="space-y-4"></div>
+            </div>
+            {/* Contact Form */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Send Message</h3>
+              <form className="space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Enter your name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Enter your email"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                    Subject
+                  </label>
+                  <select
+                    id="subject"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
+                    <option value="">Please select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="technical">Technical Support</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="business">Business Cooperation</option>
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Enter your message"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors font-medium"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            <div className="border-b border-gray-200 pb-4">
+              <h3 className="font-semibold text-gray-800 mb-2">How to use the calculator?</h3>
+              <p className="text-gray-600">Enter two values on the homepage, then select the corresponding operation button to get the result.</p>
+            </div>
+            <div className="border-b border-gray-200 pb-4">
+              <h3 className="font-semibold text-gray-800 mb-2">What calculation functions are supported?</h3>
+              <p className="text-gray-600">We support basic operations (addition, subtraction, multiplication, division), percentage calculation, and change rate calculation.</p>
+            </div>
+            <div className="border-b border-gray-200 pb-4">
+              <h3 className="font-semibold text-gray-800 mb-2">How to switch languages?</h3>
+              <p className="text-gray-600">Click the language button in the top right corner to switch between Chinese and English.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-800 mb-2">Is the calculator free to use?</h3>
+              <p className="text-gray-600">Yes, all our calculation functions are completely free.</p>
+            </div>
           </div>
         </div>
       </div>

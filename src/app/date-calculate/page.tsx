@@ -226,7 +226,7 @@ export default function DateCalculatePage() {
             <div>Duration in full years: <span className="font-mono">{result.years}</span></div>
             <div>Duration in full months: <span className="font-mono">{result.months}</span></div>
             <div>Duration in full weeks: <span className="font-mono">{result.weeks}</span></div>
-            <div>Duration in full days: <span className="font-mono">{result.days}</span></div>
+            <div><strong className="text-blue-700 text-lg">Duration in full days: <span className="font-mono">{result.days}</span></strong></div>
             <div>Duration in weekdays: <span className="font-mono">{result.weekdays}</span></div>
             <div>Duration in weekends: <span className="font-mono">{result.weekends}</span></div>
             <div>Duration in full hours: <span className="font-mono">{result.hours}</span></div>

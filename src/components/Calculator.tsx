@@ -53,10 +53,12 @@ const Calculator = () => {
           resultText = 'Cannot divide by zero';
         } else {
           calculatedResult = ((a - b) / b) * 100;
-          if (calculatedResult >= 0) {
-            resultText = `${calculatedResult.toFixed(2)}%`;
+          if (calculatedResult > 0) {
+            resultText = `Increase: ${calculatedResult.toFixed(2)}%`;
+          } else if (calculatedResult < 0) {
+            resultText = `Decrease: ${Math.abs(calculatedResult).toFixed(2)}%`;
           } else {
-            resultText = `${Math.abs(calculatedResult).toFixed(2)}%`;
+            resultText = 'No change (0%)';
           }
         }
         break;

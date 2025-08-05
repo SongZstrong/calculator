@@ -54,12 +54,7 @@ export default function AboutPage() {
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
             If you have any questions or need assistance, please feel free to contact us.
           </p>
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Contact Methods (empty, reserved for future) */}
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Contact Methods</h3>
-              <div className="space-y-4"></div>
-            </div>
+          <div className="grid md:grid-cols-1 gap-8">
             {/* Contact Form */}
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Send Message</h3>
@@ -123,28 +118,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* About FAQ Section */}
-        <div className="bg-white rounded-lg shadow-lg p-8 mt-12">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-6">
-            <div>
-              <h3 className="font-semibold text-gray-700 mb-2">What makes this calculator different from others?</h3>
-              <p className="text-gray-600">Our calculator is built with a modern tech stack (React & Next.js), offers a clean interface, and supports a wide range of calculation scenarios, from simple math to advanced date and percentage calculations.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-700 mb-2">Who is behind this project?</h3>
-              <p className="text-gray-600">We are a team of passionate developers and designers dedicated to making online calculations easy, accurate, and accessible for everyone.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-700 mb-2">How do you ensure calculation accuracy?</h3>
-              <p className="text-gray-600">All calculation logic is thoroughly tested and reviewed. We also welcome user feedback to help us catch any edge cases or improvements.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-700 mb-2">Can I suggest a new feature or improvement?</h3>
-              <p className="text-gray-600">Absolutely! We value user input. Please use the contact form to share your ideas or report issues, and we’ll do our best to respond and improve the site.</p>
-            </div>
-          </div>
-        </div>
+
       </div>
     </div>
   );

@@ -11,9 +11,11 @@ const Navbar = () => {
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/date-calculate', label: 'Date Calculator' },
-    { href: '/blog', label: 'Blog' }, // Add blog button
+    { href: '/blog', label: 'Blog' },
     { href: '/services', label: 'Services' },
-    { href: '/about', label: 'About' }, // Merged About and Contact, placed last
+    { href: '/about', label: 'About' },
+    { href: '/privacy', label: 'Privacy' },
+    { href: '/terms', label: 'Terms' },
   ];
 
   return (

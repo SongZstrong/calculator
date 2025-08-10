@@ -1,0 +1,49 @@
+# Robots.txt for Calculate Tools
+# https://calculate-tools.com/robots.txt
+
+# Allow all search engines to crawl
+User-agent: *
+Allow: /
+
+# Specific search engine instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Block access to private or admin areas (if any in future)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /api/
+
+# Block access to temporary or development files
+Disallow: /.next/
+Disallow: /node_modules/
+Disallow: /*.log
+Disallow: /*.tmp
+
+# Allow access to important files
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /favicon.ico
+
+# Sitemap location
+Sitemap: https://calculate-tools.com/sitemap.xml
+
+# Additional sitemaps (if you have more in future)
+# Sitemap: https://calculate-tools.com/blog-sitemap.xml
+# Sitemap: https://calculate-tools.com/tools-sitemap.xml
+
+# Host directive
+Host: https://calculate-tools.com

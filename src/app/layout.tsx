@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import StructuredData from "@/components/StructuredData";
+import GoogleAdSense from "@/components/GoogleAdSense";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -17,8 +19,45 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Multi-Function Calculator App",
-  description: "Online calculation tools and multi-function website",
+  title: "Multi-Function Calculator - Free Online Math Tools | Calculate Tools",
+  description: "Free online calculator with basic operations, percentage calculations, and change rate calculations. Simple, fast, and accurate math tools for everyone.",
+  keywords: "calculator, online calculator, percentage calculator, math tools, free calculator, calculation tools",
+  authors: [{ name: "Calculate Tools Team" }],
+  creator: "Calculate Tools",
+  publisher: "Calculate Tools",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://calculate-tools.com'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: "Multi-Function Calculator - Free Online Math Tools",
+    description: "Free online calculator with basic operations, percentage calculations, and change rate calculations.",
+    url: 'https://calculate-tools.com',
+    siteName: 'Calculate Tools',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Multi-Function Calculator - Free Online Math Tools",
+    description: "Free online calculator with basic operations, percentage calculations, and change rate calculations.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -28,9 +67,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8115477477403051" crossOrigin="anonymous"></script>
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -41,6 +77,8 @@ export default function RootLayout({
         <Footer />
         <Analytics />
         <SpeedInsights />
+        <StructuredData />
+        <GoogleAdSense />
       </body>
     </html>
   );
